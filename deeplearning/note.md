@@ -14,7 +14,7 @@
 - deepth
 
 - kernel size<br>
-不宜过大，那样会增加计算量，两个3*3的卷积视野相当于一个5\*5的卷积视野，但后者参数更多。
+不宜过大，那样会增加计算量，两个3*3的卷积视野相当于一个5\*5的卷积视野，但后者参数更多
 - filter/pooling layer<br>
 - batch norm<br>
 ${x_i=\frac{x_i-\bar{x}}{\sqrt{\sigma^2+\epsilon}}}$
@@ -29,7 +29,6 @@ ${R=\frac{TP}{TP+FN}}$
 - F-score <br>
 ${F1=\frac{2PR}{P+R}}$
 - ROC/AUC<br>
-- mAP<br>
-一般用在视觉/图像方面
+- mAP 一般用在视觉/图像方面
 
 
