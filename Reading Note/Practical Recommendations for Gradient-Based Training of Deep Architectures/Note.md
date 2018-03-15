@@ -58,21 +58,13 @@
 >$${\theta_{t+1} \gets \theta_t - \epsilon_t \frac{1}{B} \sum_{t\prime=Bt+1}^{B(t+1)} {\frac{\partial L(z_t\prime,\theta)}{\partial \theta}} }$$
 
 - - B is batch-size, when ${B=1}$, is online gradient descent.when ${B=train set size}$, is standard gradient descent.
-
 - - B increases, matrix-multiplications  accelerate computation.
-
 - - B increases, the number of updates per computation done decreases, down convergence, 
-
 - - B depend on hardware ,common use ${2^n}$. 
-
 > Combining these two opposing effects yields atypical U-curve with a sweet spot at an intermediatevalue of B.
-
 - - finite training set
-
 SGD convergence does not depend on the size of the training set only on the number of updates and the richness of the training distribution.
-
 - - infinit training set
-
 batch method (which updates only after seeing all
 the examples) is hopeless.
 
