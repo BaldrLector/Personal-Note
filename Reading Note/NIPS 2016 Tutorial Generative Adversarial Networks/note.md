@@ -414,12 +414,12 @@ $$ J^D(\theta^D, \theta^G) = -\frac12 \mathbb E_{\bm x \sim p_{data}} log D(x) -
 
 >with respect to $\theta^D$. Imagine that the discriminator can be optimized in function space, so the value of $D(x)$ is specied independently for every value of $x$.What is the optimal strategy for $D$? What assumptions need to be made to obtain this result?
 
-first, we sholud assume that $p_{mode}$ and $p_{model}$ is not zero for everywhere. 
-to minimize $J^D$, let derivatives to zero:
+first, we sholud assume that $p_{mode}$ and $p_{model}$ is not zero for everywhere. because at zero point, behavior have undefined and never visiting
+to minimize $J^D$, let derivatives to zero, :
 
 $$ \frac{\delta}{\delta D(x)} J^D = 0 $$
 
-By solving this equation, we get:
+By solving this equation, we obtain:
 
 $$ D^* = \frac{p_{data}(x)}{p_{data}(x)+p_{model}(x)} $$
 
@@ -436,6 +436,10 @@ $$ V(x,y) = xy $$
 
 - Does this game have an equilibrium? If so, where is it?
 
+This continuous function with a saddle point, ths saddle point is $x=y=0$. so this is a quilibrime of the game. We colud have found this point by solving for where the derivatives are zero.
+
+>Not every saddle point is an equilibrium; we require that an innitesimal perturbation of one player's parameters cannot reduce that player's cost. The saddle point for this game satises that requirement. It is something of a pathological equilibrium because the value function is constant as a function of each player's parameter when holding the other player's parameter fixed.
+
 - Consider the learning dynamics of simultaneous gradient descent. To simplify the problem, treat gradient descent as a continuous time process. With an innitesimal learning rate, gradient descent is described by a system of partial dierential equations:
 
 $$ \frac{\partial x}{\partial t} = -\frac{\partial}{\partial y} V(x(t),Y(t)) $$
@@ -443,16 +447,42 @@ $$ \frac{\partial x}{\partial t} = -\frac{\partial}{\partial y} V(x(t),Y(t)) $$
 $$ \frac{\partial y}{\partial t} = -\frac{\partial}{\partial y} V(x(t),Y(t)) $$
 Solve for the trajectory followed by these dynamics.
 
+To solving this problem, we get:
+
+$$ \frac{\partial x}{\partial t} = -y(t) $$
+$$ \frac{\partial y}{\partial t} = x(t) $$
+
+$$ \frac{\partial^2 y}{\partial t^2} = \frac{\partial x}{\partial t} = -y(t) $$
+
+Differential equations of this form have sinusoids as their set of basis functions of solutions. Solving for the coeffcients that respect the boundary conditions, we obtain
+
+$$ x(t) = x(0)cos(t) - y(0)sin(t) $$
+$$ y(t) = x(0)sin(t) + y(0)cos(t) $$
+
+These dynamics form a circular orbit, as shown in gure 37. In other words, simultaneous gradient descent with an innitesimal learning rate will orbit the equilibrium forever, at the same radius that it was initialized. With a larger learning rate, it is possible for simultaneous gradient descent to spiral outward forever. Simultaneous gradient descent will never approach the equilibrium.
+
+For some games, simultaneous gradient descent does converge, and for others, such as the one in this exercise, it does not. For GANs, there is no theoretical prediction as to whether simultaneous gradient descent should converge or not. Settling this theoretical question, and developing algorithms guaranteed to converge, remain important open research problems.
+
+
+
+
+
 
 
 ## 7.3 Maximum likelihood in the GAN framework
 
-In this exercise, we will derive a cost that yields (approximate) maximum likelihood learning within the GAN framework. Our goal is to design $J(G)$ so that, if we assume the discriminator is optimal, the expected gradient of $J(G)$ will match the expected gradient of $D_{KL}(p_{data}||P_{model})$
+>In this exercise, we will derive a cost that yields (approximate) maximum likelihood learning within the GAN framework. Our goal is to design $J(G)$ so that, if we assume the discriminator is optimal, the expected gradient of $J(G)$ will match the expected gradient of $D_{KL}(p_{data}||P_{model})$
 The solution will take the form of:
-$$ J^G = E_{x \sim p_g} f(x) $$
-The exercise consists of determining the form of $f$.
 
+$$J^G = E_{x \sim p_g}f(x)$$
 
+>The exercise consists of determining the form of $f$.
+
+first, we take derivative of KL divergence with  respect to a parameter $\theta$:
+
+$$ \frac{\partial}{\partial \theta} D_{KL}(p_{data}||p_g) = -\mathbb E _{x\sim p_{data}} \frac{\partial}{\partial \theta} \log_{p_g}(x) $$
+
+$$ \frac{\partial}{\partial \theta} J^G = \mathbb E_{x \sim p_g} f(x) \frac{\partial}{\partial \theta} \log_{p_g}(x) $$
 
 
 
