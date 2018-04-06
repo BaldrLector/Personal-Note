@@ -2,20 +2,16 @@
 
 >This repository is backup for Personal Note
 >
-# Interview Note
-
-- [x] 今日头条
-- [x] 华为
-- [x] 阿里
 
 # Paper Note
 
+- [x] A Neural Probabilistic Language Model
 - [ ] SSD
-- [ ] Yolo
+- [x] Yolo
 
-# Reading Note
+# Book Note
 
 - [x] 解析卷积神经网络—深度学习实践手册
 - [ ] 统计学习方法
-- [ ] NIPS 2016 Tutorial Generative Adversarial Networks
+- [x] NIPS 2016 Tutorial Generative Adversarial Networks
 - [ ] Practical Recommendations for Gradient-Based Training of Deep Architectures
