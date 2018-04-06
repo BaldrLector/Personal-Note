@@ -5,9 +5,12 @@
 
 # Paper Note
 
-- [x] A Neural Probabilistic Language Model
-- [ ] SSD
-- [x] Yolo
+- NLP
+    - [x] A Neural Probabilistic Language Model
+
+- CV
+    - [ ] SSD
+    - [x] Yolo
 
 # Book Note
 
