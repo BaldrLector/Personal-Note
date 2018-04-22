@@ -430,7 +430,7 @@ It is commonly asserted that mode collapseis caused by the use of Jensen-Shannon
 
 ## 5.2 Evaluation of generative models
 
-GANs are somewhat harder to evaluate than other generative models because it can be dicult to estimate the likelihood for GANs describe many of the diffculties with evaluating generative models.
+GANs are somewhat harder to evaluate than other generative models because it can be diffcult to estimate the likelihood for GANs describe many of the diffculties with evaluating generative models.
 
 ## 5.3 Discrete outputs
 
