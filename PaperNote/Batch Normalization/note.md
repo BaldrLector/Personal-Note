@@ -26,3 +26,22 @@ $$\Theta_2 \gets \Theta_2 -\frac{\alpha}{m}\sum_{i=1}^m \frac{\partial F_2(x_i,\
 # 2.Towards Reducing Internal Covariate Shift
 
 
+
+# 3. Normalization via Mini-Batch Statistics
+
+![](./pics/TIM截图20180423174044.png)
+
+![](./pics/TIM截图20180423174225.png)
+
+## 3.1 Training and Inference with Batch-Normalized Networks
+
+![](./pics/TIM截图20180423174252.png)
+
+
+## 3.2 Batch-Normalized Convolutional Networks
+
+## 3.3 Batch Normalization enables higher learning rates
+
+## 3.4 Batch Normalization regularizes the model
+
+
