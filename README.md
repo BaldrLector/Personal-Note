@@ -7,12 +7,16 @@
 
 - NLP
     - [x] A Neural Probabilistic Language Model
+    - [x] Neural Machine Translation by Jointly Learning to Align and Translate
 
 - CV
     - [ ] SSD
     - [x] Yolo
 
-# Book Note
+- General
+
+
+# Course/Toturial Note
 
 - [x] 解析卷积神经网络—深度学习实践手册
 - [ ] 统计学习方法
