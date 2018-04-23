@@ -3,7 +3,7 @@
 >**Paper Link**
 >[Batch Normalization:Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167)
 
-## Introduction
+## 1. Introduction
 
 >This part give a view on general gradient descent update rule:
 $$\begin{aligned}
@@ -22,4 +22,7 @@ $$\Theta_2 \gets \Theta_2 -\frac{\alpha}{m}\sum_{i=1}^m \frac{\partial F_2(x_i,\
 >**BN** reduce dependence of gradients on the **scale** of the parameters or of their **initial** values.
 >
 >Batch Normalization makes it possible to use **saturating nonlinearities** by preventing the network from getting stuck in the saturated modes
+
+# 2.Towards Reducing Internal Covariate Shift
+
 
