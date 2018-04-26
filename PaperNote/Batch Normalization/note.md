@@ -209,5 +209,17 @@ def batchnorm_backward(dout, cache):
 ## 3.3 Batch Normalization enables higher learning rates
 
 ## 3.4 Batch Normalization regularizes the model
+# 4 Experments
+
+## 4.1 Activations over time
+
+## 4.2 ImageNet classification
+
+### 4.2.1 Accelerating BN Networks
+
+### 4.2.2 Single-Network Classification
+
+### 4.2.3 Ensemble Classification
 
 
+### 5 Conclusion
