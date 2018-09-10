@@ -16,6 +16,9 @@
     - [x] Yolo
 
 - General
+    - [x] Adam
+    - [x] BN
+    - [x] Deep Compression
 
 
 # Course/Toturial Note

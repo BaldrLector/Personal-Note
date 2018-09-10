@@ -46,3 +46,25 @@ $$\begin{aligned}
 For each word, the character-level representation is computed by the CNN with character embedding as inputs. Then character-level represention vector is concatenated with the word embedding vector to feed to BLSTM. Then output vector of BLSTM feed to CRF
 
 ![](pics/4.PNG)
+
+##3 Network Training 
+
+###3.1 Parameter Initialization
+#### Word Embedding
+uniforaly sample from range [$-\sqrt{\frac{3}{dim}},\sqrt{\frac{3}{dim}}$]
+
+#### character Embeddings
+uniforaly sample from range [$-\sqrt{\frac{3}{dim}},\sqrt{\frac{3}{dim}}$]
+
+#### Weights Matries and Bias Vectors
+uniform samples from [$-\sqrt{\frac{6}{r+c}}$,$\sqrt{\frac{6}{r+c}}$], r and c are number of row and columns in structure
+
+###3.2 Optimization Algorithm
+
+#### Early stopping
+
+#### Fine Tuning
+
+#### Dropout Training
+
+#### Tuning Hyper-Parameters
