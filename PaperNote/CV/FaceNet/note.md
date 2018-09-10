@@ -10,3 +10,8 @@
 
 # 1 Introduction
 
+>Once embedding space has been produced, aforementioned tasks become straight-forward: 
+>- face verification simply involves **thresholding** the distance between the two embeded vectors
+>- recognition becomes a k-NN classification problem
+>- clustering can be achieved using off-the-shelf techniques such as k-means or agglomerative clustering
+
