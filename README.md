@@ -8,6 +8,8 @@
 - NLP
     - [x] A Neural Probabilistic Language Model
     - [x] Neural Machine Translation by Jointly Learning to Align and Translate
+    - [x] Efﬁcient Estimation of Word Representations in Vector Space
+    - [x] End-to-endSequenceLabelingviaBi-directionalLSTM-CNNs-CRF
 
 - CV
     - [ ] SSD
